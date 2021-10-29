@@ -16,9 +16,9 @@ jobs:
     steps:
       - name: pwd
         run: pwd
-      - name: env
-        run: env
       - name: expression value
         run: echo "${{ github.workspace}}"
       - name: env value
-        run: echo "${{ env.GITHUB_WORKSPACE}}"
+        run: echo "$GITHUB_WORKSPACE"
+      - name: All env vars
+        run: env
