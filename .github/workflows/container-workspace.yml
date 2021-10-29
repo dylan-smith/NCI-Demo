@@ -7,11 +7,10 @@ on:
 
 jobs:
   Matrix:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     container: ${{ matrix.container }}
     strategy:
       matrix:
-        os: [ubuntu-latest, self-hosted]
         container: ['', 'node:latest']
     steps:
       - name: pwd
